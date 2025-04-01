@@ -1,0 +1,22 @@
+{
+  "nodes": {
+    "generate_epub#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 1054,
+          "y": -1759
+        }
+      }
+    },
+    "analyse_pdf#1": {
+      "contentWidth": 533.6117326279499,
+      "rfNode": {
+        "position": {
+          "x": 438,
+          "y": -1826
+        }
+      }
+    }
+  }
+}
