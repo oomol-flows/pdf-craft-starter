@@ -1,6 +1,8 @@
 # pdf-craft-starter
 
-Starter project using the [pdf-craft](https://github.com/oomol-flows/pdf-craft) package.
+[![Open in OOMOL Studio](https://static.oomol.com/assets/button.svg)](https://hub.oomol.com/package/pdf-craft-starter?open=true)
+
+OOMOL Starter project using the [pdf-craft](https://github.com/oomol-flows/pdf-craft) package.
 
 [![About PDF craft](https://github.com/oomol-flows/pdf-craft/raw/main/docs/images/youtube.png)](https://www.youtube.com/watch?v=EpaLC71gPpM)
 
