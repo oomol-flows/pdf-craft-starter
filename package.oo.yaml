@@ -1,4 +1,4 @@
-version: 0.0.2
+version: 0.0.4
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
@@ -6,11 +6,11 @@ scripts:
     npm install
     pip install -r requirements.txt
 dependencies:
-  pdf-craft: 0.0.6
+  pdf-craft: 0.0.7
 name: pdf-craft-starter
 displayName: PDF Craft Starter
-description: Starter project using the pdf-craft package.
+description: OOMOL Starter project using the pdf-craft package.
 releaseType: project
 repository: https://github.com/oomol-flows/pdf-craft-starter
-releaseNotes: Init project
+releaseNotes: Update flow thumbnail
 icon: ./icon.png

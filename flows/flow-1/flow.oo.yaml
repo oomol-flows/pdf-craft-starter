@@ -32,3 +32,4 @@ nodes:
           temperature: 1
           top_p: 0.8
           max_tokens: 4096
+    description: https://github.com/oomol-lab/pdf-craft
