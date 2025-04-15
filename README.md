@@ -1,6 +1,7 @@
-# pdf-craft-starter
-
-[![Open in OOMOL Studio](https://static.oomol.com/assets/button.svg)](https://hub.oomol.com/package/pdf-craft-starter?open=true)
+<div align=center>
+  <h1>PDF Craft Starter</h1>
+  <p><a href="https://hub.oomol.com/package/pdf-craft-starter?open=true" target="_blank"><img src="https://static.oomol.com/assets/button.svg" alt="Open in OOMOL Studio" /></a></p>
+</div>
 
 OOMOL Starter project using the [pdf-craft](https://github.com/oomol-flows/pdf-craft) package.
 
