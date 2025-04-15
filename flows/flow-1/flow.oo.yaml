@@ -9,6 +9,10 @@ nodes:
             output_handle: output_dir
       - handle: epub_file_path
         value:
+      - handle: render_latex
+        value: true
+      - handle: render_table
+        value: true
   - task: pdf-craft::analyse_pdf
     title: "Analyse PDF #1"
     node_id: analyse_pdf#1
@@ -32,4 +36,10 @@ nodes:
           temperature: 1
           top_p: 0.8
           max_tokens: 4096
+      - handle: extract_formula
+        value: false
+      - handle: extract_table
+        value: false
+      - handle: window_tokens
+        value:
     description: https://github.com/oomol-lab/pdf-craft
