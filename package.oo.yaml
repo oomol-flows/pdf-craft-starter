@@ -7,6 +7,7 @@ scripts:
     pip install -r requirements.txt
 dependencies:
   pdf-craft: 0.1.0
+  oomol-preview: 0.0.3
 name: pdf-craft-starter
 displayName: PDF Craft Starter
 description: OOMOL Starter project using the pdf-craft package.
