@@ -1,16 +1,16 @@
 {
   "nodes": {
     "generate_epub#1": {
-      "contentWidth": 450,
+      "contentWidth": 439.79738276655394,
       "rfNode": {
         "position": {
-          "x": 1054,
-          "y": -1759
+          "x": 1050.0177929854578,
+          "y": -1840
         }
       }
     },
     "analyse_pdf#1": {
-      "contentWidth": 533.6117326279499,
+      "contentWidth": 568.5579413891246,
       "rfNode": {
         "position": {
           "x": 406,
