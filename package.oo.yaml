@@ -1,4 +1,4 @@
-version: 0.0.4
+version: 0.1.0
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
@@ -13,5 +13,5 @@ displayName: PDF Craft Starter
 description: OOMOL Starter project using the pdf-craft package.
 releaseType: project
 repository: https://github.com/oomol-flows/pdf-craft-starter
-releaseNotes: Update flow thumbnail
+releaseNotes: support LaTeX & table recognization.
 icon: ./icon.png
