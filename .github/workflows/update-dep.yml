@@ -1,0 +1,56 @@
+name: Update Dependencies
+on:
+  workflow_dispatch:
+    inputs:
+      pdf-craft:
+        description: 'Version of pdf-craft'
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install oopm
+        run: npm install -g oopm
+
+      - name: Install OIDC Client from Core Package
+        run: npm install @actions/core@1.11.1 @actions/http-client
+        shell: bash
+
+      - name: Get Id Token
+        uses: actions/github-script@v7
+        id: id_token
+        with:
+          script: |
+            const coredemo = require('@actions/core')
+            let id_token = await coredemo.getIDToken()
+            coredemo.setOutput('id_token', id_token)
+
+      - name: Update pdf-craft version
+        run: |
+          sed -i "s/pdf-craft: .*/pdf-craft: ${{ github.event.inputs.pdf-craft }}/" package.oo.yaml
+
+      - name: Test
+        run: |
+          mkdir -p /tmp/ooomol
+          oopm install --token "github-action-${{ steps.id_token.outputs.id_token }}" -d /tmp/ooomol
+        shell: bash
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: ./package.oo.yaml
+          title: 'chore(deps): update pdf-craft version to ${{ github.event.inputs.pdf-craft }}'
+          branch: update-pdf-craft-version-${{ github.event.inputs.pdf-craft }}
+          assignees: crimx
+          reviewers: crimx
