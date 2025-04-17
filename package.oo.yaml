@@ -6,7 +6,7 @@ scripts:
     npm install
     pip install -r requirements.txt
 dependencies:
-  pdf-craft: 0.1.0
+  pdf-craft: 0.0.10
   oomol-preview: 0.0.3
 name: pdf-craft-starter
 displayName: PDF Craft Starter
