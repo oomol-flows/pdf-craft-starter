@@ -1,11 +1,17 @@
 nodes:
-  - task: pdf-craft::pdf-to-markdown
-    title: "PDF to Markdown #1"
-    node_id: pdf-to-markdown#1
+  - task: oomol-preview::markdown_file_preview
+    title: "Markdown preview (with file) #1"
+    node_id: markdown_file_preview#1
+    inputs_from:
+      - handle: file_path
+        from_node:
+          - node_id: pdf-to-markdown#2
+            output_handle: output_file
+  - task: pdf-craft-cloud::pdf-to-markdown
+    title: "PDF to Markdown #2"
+    node_id: pdf-to-markdown#2
     inputs_from:
       - handle: pdf
-      - handle: device
-        value: cuda
       - handle: model_dir
         value:
       - handle: ocr_level
@@ -18,11 +24,3 @@ nodes:
         value:
       - handle: assets_dir_name
         value: images
-  - task: oomol-preview::markdown_file_preview
-    title: "Markdown preview (with file) #1"
-    node_id: markdown_file_preview#1
-    inputs_from:
-      - handle: file_path
-        from_node:
-          - node_id: pdf-to-markdown#1
-            output_handle: output_file

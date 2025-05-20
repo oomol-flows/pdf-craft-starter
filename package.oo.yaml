@@ -6,10 +6,10 @@ scripts:
     npm install
     pip install -r requirements.txt
 dependencies:
-  pdf-craft: 0.1.0
+  pdf-craft-cloud: 0.1.2
   oomol-preview: 0.0.3
-name: pdf-craft-starter
-displayName: PDF Craft Starter
+name: pdf-craft-cloud-starter
+displayName: PDF Craft Cloud Starter
 description: OOMOL Starter project using the pdf-craft package.
 releaseType: project
 repository: https://github.com/oomol-flows/pdf-craft-starter

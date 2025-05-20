@@ -1,29 +1,19 @@
 nodes:
-  - task: pdf-craft::generate_epub
-    title: "Generate EPUB #1"
-    node_id: generate_epub#1
-    inputs_from:
-      - handle: analysed_dir
-        from_node:
-          - node_id: analyse_pdf#1
-            output_handle: output_dir
-      - handle: epub_file_path
-        value:
-      - handle: render_latex
-        value: true
-      - handle: render_table
-        value: true
-  - task: pdf-craft::analyse_pdf
-    title: "Analyse PDF #1"
-    node_id: analyse_pdf#1
+  - task: pdf-craft-cloud::analyse_pdf
+    title: "Analyse PDF #2"
+    node_id: analyse_pdf#2
     inputs_from:
       - handle: pdf
-      - handle: device
-        value: cuda
       - handle: model_dir
         value:
       - handle: ocr_level
         value: once
+      - handle: extract_formula
+        value: false
+      - handle: extract_table
+        value: false
+      - handle: window_tokens
+        value:
       - handle: retry_times
         value: 5
       - handle: retry_interval_seconds
@@ -36,10 +26,17 @@ nodes:
           temperature: 1
           top_p: 0.8
           max_tokens: 4096
-      - handle: extract_formula
-        value: false
-      - handle: extract_table
-        value: false
-      - handle: window_tokens
+  - task: pdf-craft-cloud::generate_epub
+    title: "Generate EPUB #2"
+    node_id: generate_epub#2
+    inputs_from:
+      - handle: analysed_dir
+        from_node:
+          - node_id: analyse_pdf#2
+            output_handle: output_dir
+      - handle: render_latex
+        value: true
+      - handle: render_table
+        value: true
+      - handle: epub_file_path
         value:
-    description: https://github.com/oomol-lab/pdf-craft
