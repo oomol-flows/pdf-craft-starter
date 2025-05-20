@@ -1,6 +1,6 @@
 <div align=center>
-  <h1>PDF Craft Starter</h1>
-  <p><a href="https://hub.oomol.com/package/pdf-craft-starter?open=true" target="_blank"><img src="https://static.oomol.com/assets/button.svg" alt="Open in OOMOL Studio" /></a></p>
+  <h1>PDF Craft Cloud Starter</h1>
+  <p><a href="https://hub.oomol.com/package/pdf-craft-cloud-starter?open=true" target="_blank"><img src="https://static.oomol.com/assets/button.svg" alt="Open in OOMOL Studio" /></a></p>
 </div>
 
 OOMOL Starter project using the [pdf-craft](https://github.com/oomol-flows/pdf-craft) package.
